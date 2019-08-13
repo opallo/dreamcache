@@ -1,0 +1,122 @@
+
+body{
+  margin: 0 15rem;
+  justify-self: center;
+}
+
+ul{
+  box-sizing: border-box;
+  /*justify-content: space-evenly;*/
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+
+.top-container{
+  box-sizing: border-box;
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  position: sticky;
+  width: 100%;
+  box-shadow: -1px 1px 5px lightgray;
+}
+
+.logo{
+  background-color: white;
+  box-sizing: border-box;
+  white-space: nowrap;
+  margin: 0px;
+  padding: .5rem;
+  font-size: 1.5rem;
+  z-index: 0;
+  font-family: 'Libre Caslon Display', serif;
+}
+
+.nav-drop{
+  cursor: pointer;
+}
+
+.navbar {
+  box-sizing: border-box;
+  background-color: rgb(215, 245, 255);
+  background-image: linear-gradient(170deg, lightblue, white);  
+  width: 100%;
+}
+
+.navbar ul li{
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.navbar ul li:hover{
+  background-color: rgb(255, 0, 0);
+}
+
+.navbar ul li a{
+  display: block;
+  padding: .5rem .7rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+  font-family: 'Inconsolata', monospace;
+}
+
+.content{
+  display: grid;
+  grid-template-areas: 
+  'whitespace1 whitespace1 header1'
+  ;
+}
+
+.header1{
+  grid-area: header1;
+  text-align: center;
+  font-size: 1rem;
+  padding: 2rem 2rem;
+  margin: 0;
+  transition: .3s;
+}
+
+.header1:hover{
+  padding: 2rem 5rem;
+}
+
+.description1{
+  grid-area: description1;
+}
+
+.whitespace1{
+  grid-area: whitespace1;
+  background-color: rgb(235, 235, 235);
+  padding: 3rem;
+}
+.whitespace2{
+  grid-area: whitespace2;
+  background-color: rgb(235, 235, 235);
+}
+
+
+
+
+.navbar li{
+  padding: 0.5rem 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .top-container {
+    flex-direction: column;
+  }
+  ul{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
