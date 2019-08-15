@@ -1,6 +1,7 @@
 
 body{
-  
+  background-color: rgb(255, 255, 255);
+  background-image: url("https://lh3.googleusercontent.com/_IYMHYvurUA1GpSEcbAu_PM3QpHj9mk-uXNi8z2-21E02C2hoMVWoupj3ipkaZy-6jQuiUXCO8QM-NMcfFei6Z4HoIZCwd1oozadG8d5S0nuW4ViDNVgEY2k02Vi2Iy7kRCvlqm-7B8aWbYZACNQekiIBBToJ3ZBIMgzK5kC_eHIhhFCr3P44D1wxlZCQUqWLVwjld2EoSHZBt5oPjFPbQJdoaYsh7uiT2PjOxAbc_GF7j8rnUqC-9Dip_wls0vIrp1SVzw5IANXesr3alDxUC51yuXczFn6xAst9sX40VuKX4uiOadMco2VHOVgY9wwXA1aiNMregjYn6BO75clMVtsKq7mKnWEmfeE_eTPIsMji2pkKMmrwHKf7lEUrGYjIi9EKQ5QCZ0cHfTTOEmBtpvetCiH6wkltR9a07gqfETP4i6pHs9KI-bBWlXxGyHNY6rIcqiwx0rWQkNnAxv8TfhUoDbUjCK5ECWd3kxw-wPZF3fju_SNGM73-w_0grvGHzbjUg0X98fvIqlnoXs5UHDdDM1cEfVV6od2ns9VFbHj5d8RfA4GwNk7HwCrbWUJBd6-lvcwnXyrk1o-PaKFP5L3Y_WPze_NfO8z-33F5nyT8I7qW8gkLEH-jcLZdCfj8OmhrdBqoZysaj7I4-QALRFZdQ=w634-h877-no");
   justify-self: center;
 }
 
@@ -22,15 +23,16 @@ ul{
   align-items: center;
   position: sticky;
   width: 100%;
-  box-shadow: -1px 1px 5px lightgray;
+  box-shadow: -1px 1px 5px rgb(0, 0, 0);
+  transition: .3s;
+  background-color:white;
 }
 
 .logo{
-  background-color: white;
   box-sizing: border-box;
   white-space: nowrap;
   margin: 0px;
-  padding: .5rem;
+  padding: 0.5rem;
   font-size: 1.5rem;
   z-index: 0;
   font-family: 'Libre Caslon Display', serif;
@@ -61,7 +63,7 @@ ul{
 }
 
 .navbar ul li:hover{
-  background-color: rgb(255, 0, 0);
+  background-color:rgb(196, 240, 255);
 }
 
 .navbar ul li a{
@@ -75,10 +77,24 @@ ul{
 }
 
 .content{
+  margin: 2rem 20%;
   display: grid;
   grid-template-areas: 
   'whitespace1 whitespace1 header1'
   ;
+  box-shadow: 1px 5px 5px rgb(0, 0, 0);
+  transition: .3s ease-in;
+}
+
+.content:hover{
+  box-shadow: 1px 20px 25px rgb(0, 0, 0);
+  transform: rotateZ(-3deg) scale(1.1);
+}
+
+.header-text{
+  font-family: 'Libre Caslon Display', serif;
+  color: rgb(0, 0, 0);
+  text-shadow: 10px black;
 }
 
 .header1{
@@ -88,11 +104,9 @@ ul{
   padding: 2rem 2rem;
   margin: 0;
   transition: .3s;
+  background-color: rgb(255, 255, 255);
 }
 
-.header1:hover{
-  padding: 2rem 5rem;
-}
 
 .description1{
   grid-area: description1;
@@ -100,16 +114,20 @@ ul{
 
 .whitespace1{
   grid-area: whitespace1;
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(255, 255, 255);
   padding: 3rem;
+
 }
+
+.whitespace1 p{
+  font-family: 'Inconsolata', monospace;
+  color: rgb(0, 0, 0);
+}
+
 .whitespace2{
   grid-area: whitespace2;
   background-color: rgb(235, 235, 235);
 }
-
-
-
 
 .navbar li{
   padding: 0.5rem 1rem;
@@ -119,9 +137,13 @@ ul{
   .top-container {
     flex-direction: column;
   }
+  .content{
+    margin: 0;
+  }
   ul{
     flex-direction: column;
     align-items: center;
   }
+
 }
 
